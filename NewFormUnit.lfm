@@ -1,0 +1,106 @@
+object NewForm: TNewForm
+  Left = 492
+  Top = 232
+  BorderStyle = bsToolWindow
+  Caption = 'New'
+  ClientHeight = 196
+  ClientWidth = 192
+  Color = clBtnFace
+  Constraints.MaxHeight = 230
+  Constraints.MaxWidth = 200
+  Constraints.MinHeight = 230
+  Constraints.MinWidth = 200
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Width: TLabel
+    Left = 32
+    Top = 104
+    Width = 34
+    Height = 16
+    Caption = 'Width'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Height: TLabel
+    Left = 32
+    Top = 128
+    Width = 39
+    Height = 16
+    Caption = 'Height'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 56
+    Top = 160
+    Width = 75
+    Height = 25
+    Caption = 'OK'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object WidthEdit: TEdit
+    Left = 80
+    Top = 104
+    Width = 81
+    Height = 21
+    TabOrder = 1
+  end
+  object HeightEdit: TEdit
+    Left = 80
+    Top = 128
+    Width = 81
+    Height = 21
+    TabOrder = 2
+  end
+  object VGA: TRadioButton
+    Left = 8
+    Top = 8
+    Width = 113
+    Height = 17
+    Caption = '640 x 480'
+    Checked = True
+    TabOrder = 3
+    TabStop = True
+  end
+  object SVGA: TRadioButton
+    Left = 8
+    Top = 32
+    Width = 113
+    Height = 17
+    Caption = '800 x 600'
+    TabOrder = 4
+  end
+  object XGA: TRadioButton
+    Left = 8
+    Top = 56
+    Width = 113
+    Height = 17
+    Caption = '1024 x 768'
+    TabOrder = 5
+  end
+  object Custom: TRadioButton
+    Left = 8
+    Top = 80
+    Width = 113
+    Height = 17
+    Caption = 'Custom'
+    TabOrder = 6
+  end
+end
