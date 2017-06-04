@@ -57,7 +57,6 @@ type
       procedure selectAction();
       procedure recognizeAction(color: TColor = clBlack; width: Integer = 1; bgcolor: TColor = clWhite; bgmode: boolean = false);
       //vytvaranie objektov
-      procedure createLine(color: TColor = clBlack; width: Integer = 1);
       procedure createPolyLine(color: TColor = clBlack; width: Integer = 1);
       procedure createSegmentLine(color: TColor = clBlack; width: Integer = 1);
       procedure createCircle(color: TColor = clBlack; width: Integer = 1; bgcolor: TColor = clWhite; bgmode: boolean = false);
@@ -247,11 +246,6 @@ end;
 procedure TMain.recognizeAction(color: TColor = clBlack; width: Integer = 1; bgcolor: TColor = clWhite; bgmode: boolean = false);
 begin
   changeAction(TRecognition.Create(_picture, color, width, bgcolor, bgmode));
-end;
-
-procedure TMain.createLine(color: TColor = clBlack; width: Integer = 1);
-begin
-  changeAction(TCreate.Create(TLine.Create, _picture, color, width));
 end;
 
 procedure TMain.createPolyLine(color: TColor = clBlack; width: Integer = 1);

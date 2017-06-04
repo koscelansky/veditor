@@ -273,8 +273,6 @@ begin
         addShape(TPolyLine.loadFromBuffer(p, count));
       stSegmentLine:
         addShape(TSegmentLine.loadFromBuffer(p, count));
-      stLine:
-        addShape(TLine.loadFromBuffer(p, count));
       stBezierCurve:
         addShape(TBezierCurve.loadFromBuffer(p, count));
       stCircle:
