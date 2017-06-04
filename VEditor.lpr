@@ -16,8 +16,6 @@ uses
   NewFormUnit in 'NewFormUnit.pas' {NewForm},
   AboutBoxUnit in 'AboutBoxUnit.pas' {AboutBox};
 
-{$R *.res}
-
 begin
   Application.Initialize;
   Application.Title := 'VEditor';
