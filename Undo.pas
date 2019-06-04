@@ -17,7 +17,7 @@ type
       function getShape(): TShape; virtual;
       procedure undo(); virtual; abstract;
       procedure redo(); virtual; abstract;
-      function toString(): string; virtual; abstract;
+      function toString(): AnsiString; override; abstract;
 
   end;
 

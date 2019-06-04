@@ -34,7 +34,7 @@ type
       procedure setPoint(p: TPoint);
     public
       function pointDistance(p: TPrecisePoint): Real; //vrati vzdialenost bodu od bodu
-      function toString(): String; //vrati textovu reprezentaciu
+      function toString(): AnsiString; override; //vrati textovu reprezentaciu
       function clone(): TPrecisePoint; //vrati kopiu bodu
 
       constructor Create(x, y: Real); overload; //vytvori bod zo suradnic
@@ -53,7 +53,7 @@ type
     public
       function getLength(): Real; //vrati dlzku vektora
       function getPerpendicularVector(): TPlanarVector; //vrati kolmy vektor
-      function toString(): String; //vrati textovu reprezentaciu
+      function toString(): AnsiString; override; //vrati textovu reprezentaciu
       function clone(): TPlanarVector; //vrati kopiu vektora
 
       procedure rotate(angle: Real); overload; //otoci vektor o zadany uhol
@@ -86,7 +86,7 @@ type
       function pointDistance(p: TPoint): Integer; //vrati vzdialenost bodu od priamky
       function solve(x, y: Real): Real; overload; //dosadi do rovnice x a y a vrati hodnotu
       function solve(p: TPoint): Real; overload; //to iste ako s predchadzajuce akurat s bodom
-      function toString(): String; //vrati textovu reprezentaciu
+      function toString(): AnsiString; override;
       function clone(): TGeneralLineEquation; //vrati kopiu prianky
 
       procedure perpendicular(p: TPrecisePoint); overload; //zmeny priamku na kolmu, prechadzajucu zadanym bodom
@@ -121,7 +121,7 @@ type
       function lineIntersection(a, b, c: Real): TPrecisePoints; overload;
       function xToPoint(x: Real): TPrecisePoint; //vrati bod ktory je na elipse a x suradnicu x - vrati bod s kladnou zlozkov y
       function yToPoint(y: Real): TPrecisePoint; //vrati bod ktory je na elipse a x suradnicu y - vrati bod s kladnou zlozkov x
-      function toString(): String;
+      function toString(): AnsiString; override;
       function getPoints(): TPoints;
 
       constructor Create(x, y, a, b: Real);
